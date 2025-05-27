@@ -19,7 +19,8 @@ A FastAPI-based image moderation service that automatically detects and blocks h
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/AbdullahDurrani4268/image-moderation.git
+[If you are using the zip folder, ignore the above step just simply unzip it follow the steps below.]
 cd image-moderation
 ```
 
@@ -55,9 +56,10 @@ The services will be available at:
 ## Usage
 
 1. Access the web interface at http://localhost
-2. Set your token in the authentication section
-3. Upload an image for moderation
-4. View the moderation results
+2. Set your token in the authentication section - A default admin token is set for tesing purposes (admin-token-123)
+3. Create Tokens and List Tokens
+4. Upload an image for moderation
+5. View the moderation results
 
 ## Development
 
@@ -67,6 +69,12 @@ The services will be available at:
 .
 ├── backend/
 │   ├── main.py
+│   ├── auth.py
+│   ├── config.py
+│   ├── dependencies.py
+│   ├── moderation.py
+│   ├── main.py
+│   ├── tests.py
 │   ├── requirements.txt
 │   └── Dockerfile
 ├── frontend/
@@ -75,6 +83,8 @@ The services will be available at:
 │   ├── app.js
 │   └── Dockerfile
 ├── docker-compose.yml
+├── .gitignore
+├── .env.example
 └── README.md
 ```
 
@@ -83,11 +93,7 @@ The services will be available at:
 ```bash
 # Run backend tests
 cd backend
-pytest
-
-# Run frontend tests
-cd frontend
-npm test
+python tests.py
 ```
 
 ## Contributing
@@ -97,7 +103,3 @@ npm test
 3. Commit your changes
 4. Push to the branch
 5. Create a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details. 
